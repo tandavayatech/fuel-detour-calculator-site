@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fuel Detour Calculator — Privacy Policy</title>
+<meta name="description" content="Privacy policy for the Fuel Detour Calculator Android app.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Barlow:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<style>
+  .glance{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:22px 24px;margin:28px 0 8px;}
+  .glance-title{font-family:var(--font-mono);font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:14px;}
+  .glance-grid{display:grid;grid-template-columns:1fr;gap:12px;}
+  @media (min-width:560px){ .glance-grid{grid-template-columns:1fr 1fr;} }
+  .glance-item{display:flex;gap:10px;align-items:flex-start;}
+  .glance-mark{font-family:var(--font-mono);font-size:13px;flex-shrink:0;width:20px;padding-top:2px;}
+  .glance-mark.yes{color:var(--accent);}
+  .glance-mark.no{color:var(--warn);}
+  .glance-item p{margin:0;font-size:14.5px;color:var(--text);max-width:none;}
+  .meta{color:var(--text-muted);font-size:14px;display:flex;gap:18px;flex-wrap:wrap;}
+  .meta strong{color:var(--text);font-weight:600;}
+</style>
+</head>
+<body>
+
+<nav class="sitenav">
+  <a href="index.html" class="brand">⛽ Fuel Detour Calculator</a>
+  <div class="links">
+    <a href="guide.html">Guide</a>
+    <a href="privacy.html" class="active">Privacy</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<div class="wrap narrow">
+
+  <header>
+    <div class="eyebrow">Legal</div>
+    <h1>Privacy Policy</h1>
+    <div class="meta">
+      <span>Last updated: <strong>13 September 2026</strong></span>
+      <span>Developer: <strong>Tandavaya Tech</strong></span>
+    </div>
+  </header>
+
+  <p class="lede">Fuel Detour Calculator is a fuel-economy and fuel-price tool. This page explains, plainly, what the app does and doesn't do with your data.</p>
+
+  <div class="glance">
+    <div class="glance-title">At a glance</div>
+    <div class="glance-grid">
+      <div class="glance-item"><span class="glance-mark yes">✓</span><p>No account or sign-in, ever</p></div>
+      <div class="glance-item"><span class="glance-mark yes">✓</span><p>Your fuel logs stay on your device only</p></div>
+      <div class="glance-item"><span class="glance-mark no">✕</span><p>No ads, analytics, or tracking SDKs</p></div>
+      <div class="glance-item"><span class="glance-mark no">✕</span><p>We don't run a server — there's nowhere to send your data even if we wanted to</p></div>
+    </div>
+  </div>
+
+  <h2>What's stored on <span>your device</span></h2>
+  <p>Vehicle names, and every fuel refill you log — odometer reading, litres, price, date, and the two tracking flags (<code>Missed previous refill</code> and <code>Not filled to brim</code>) — are saved to the app's private storage on your phone. No other app can read this data, and we never see it: there's no server this app talks to for your log data.</p>
+  <p>If your phone's standard Android backup is switched on, this data may be included in that backup like any other app's files — that backup is tied to your own Google account, not to us. Uninstalling the app, or deleting entries within it, removes the data permanently. Exporting to CSV creates a file entirely under your control; where it goes after that is up to you.</p>
+
+  <h2>Location and <span>postcode</span> searches</h2>
+  <p>The Prices tab is the only part of the app that involves your location, and only when you actively search. There are two ways to search:</p>
+  <ul>
+    <li><strong>Type a postcode</strong> — it's converted to a map coordinate using Android's built-in Geocoder.</li>
+    <li><strong>Leave it blank</strong> — the app asks permission to use your device's GPS location via Google Play services.</li>
+  </ul>
+  <p>Either way, the resulting coordinates are sent directly from your phone to two places, so we can show you nearby fuel prices: <strong>Google</strong> (for maps and location resolution) and the <strong>UK government's Fuel Finder service</strong> (<code>fuel-finder.service.gov.uk</code>), which supplies the actual station and price data. These go straight from your device to those services — again, never through us. Search results are kept in memory only while the app is open, for up to 15 minutes, then discarded; they are never written to disk.</p>
+
+  <h2>What we <span>don't</span> do</h2>
+  <ul>
+    <li>No account creation or sign-in of any kind</li>
+    <li>No advertising or ad networks</li>
+    <li>No analytics or crash-reporting SDKs</li>
+    <li>No selling or sharing of data for marketing purposes</li>
+    <li>No knowing collection of data from children — the app isn't directed at children</li>
+  </ul>
+
+  <h2>Third-party <span>services</span></h2>
+  <div class="card">
+    <p><strong>Google Play services</strong> (Location and Maps) — used to resolve GPS/postcode coordinates and display the results on a map. Governed by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</p>
+  </div>
+  <div class="card">
+    <p><strong>UK Government Fuel Finder service</strong> — supplies the fuel station and price data shown in the app. Governed by the <a href="https://www.gov.uk/help/privacy-notice" target="_blank" rel="noopener">GOV.UK privacy notice</a>.</p>
+  </div>
+
+  <h2>Your <span>choices</span></h2>
+  <ul>
+    <li>Decline the location permission and use postcode search instead — or skip the Prices tab entirely; the rest of the app works fully offline.</li>
+    <li>Export your fuel log to a CSV file at any time from the Fuel Log tab.</li>
+    <li>Uninstall the app to remove all locally stored data immediately.</li>
+  </ul>
+
+  <hr class="divider">
+
+  <h2>Changes to this policy</h2>
+  <p>If this policy changes, the update will appear on this same page with a new "last updated" date above.</p>
+
+  <div class="contact-card">
+    <h3>Questions?</h3>
+    <p>Get in touch and we'll answer directly — see the <a href="contact.html">Contact page</a>.</p>
+  </div>
+
+</div>
+
+<footer class="sitefoot">
+  <p>Fuel Detour Calculator — built by Tandavaya Tech.</p>
+</footer>
+
+</body>
+</html>

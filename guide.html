@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fuel Detour Calculator — Guide</title>
+<meta name="description" content="A tab-by-tab guide to the Fuel Detour Calculator app: the Calculator, Fuel Log, Stats, and Prices screens.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Barlow:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<nav class="sitenav">
+  <a href="index.html" class="brand">⛽ Fuel Detour Calculator</a>
+  <div class="links">
+    <a href="guide.html" class="active">Guide</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">The Handbook</div>
+    <h1>How to use it</h1>
+    <p class="lede">Everything the app can do, tab by tab — and the two checkboxes that keep your MPG figures honest.</p>
+  </header>
+
+  <nav class="tabs">
+    <a href="#start"><span class="icon">🚗</span>Start Here</a>
+    <a href="#calculator"><span class="icon">🧭</span>Calculator</a>
+    <a href="#log"><span class="icon">⛽</span>Fuel Log</a>
+    <a href="#stats"><span class="icon">📊</span>Stats</a>
+    <a href="#prices"><span class="icon">📍</span>Prices</a>
+  </nav>
+
+  <section id="start">
+    <div class="section-head"><span class="section-num">00</span><h2>Before you start</h2></div>
+    <p class="section-sub">The app tracks fuel per vehicle, so the very first thing to do is add one.</p>
+    <ol class="step-list">
+      <li>Open the <strong>Fuel Log</strong> tab.</li>
+      <li>Tap the <strong>+</strong> next to the vehicle dropdown.</li>
+      <li>Give it a name you'll recognise — "Focus," "Work Van," or a registration plate all work.</li>
+    </ol>
+    <p>Everything else in the app — the calculator, your stats, your log — is scoped to whichever vehicle is currently selected.</p>
+  </section>
+
+  <section id="calculator">
+    <div class="section-head"><span class="section-num">01</span><h2>Calculator</h2></div>
+    <p class="section-sub">Works out the minimum fuel you'd need to buy at a cheaper detour to make the trip worth it.</p>
+
+    <h3>Set the detour distance</h3>
+    <p>Two modes: <strong>Manual</strong>, where you type the extra distance directly, or <strong>Calculate</strong>, where you enter your normal route's distance and the detour route's distance — the app works out the difference for you.</p>
+
+    <h3>Set your efficiency</h3>
+    <p>Pick a unit — <code>MPG (UK)</code>, <code>MPG (US)</code>, or <code>L/100km</code> — then either type a figure by hand, or tick <strong>Use average</strong> once you've logged two or more fill-ups, to use your vehicle's real calculated efficiency instead of a guess.</p>
+
+    <h3>Read the result</h3>
+    <div class="grid-2">
+      <div class="stat-card"><h4>Break-even volume</h4><p>The minimum litres you'd need to buy at the detour's price for it to actually save you money.</p></div>
+      <div class="stat-card"><h4>Tank capacity check</h4><p>Compares that against your largest-ever logged fill-up. A ⚠️ means the detour would need more fuel than your tank likely holds.</p></div>
+      <div class="stat-card"><h4>Full tank diff</h4><p>What you'd save (or lose) in £ if you filled all the way up at the detour instead of your usual stop.</p></div>
+    </div>
+  </section>
+
+  <section id="log">
+    <div class="section-head"><span class="section-num">02</span><h2>Fuel Log</h2></div>
+    <p class="section-sub">Every fill-up you log here is what makes the Calculator and Stats accurate — the two checkboxes below matter more than they look.</p>
+
+    <h3>Adding a refill</h3>
+    <p>Tap the <strong>+</strong> button and fill in the date, odometer reading, litres, and either cost per litre or total cost — whichever you type, the app works out the other automatically.</p>
+
+    <div class="checkbox-row">
+      <span class="box">☑</span>
+      <p><strong>Missed previous refill(s)</strong> — tick this if you topped up at some point without logging it. It stops that unlogged gap being counted in any efficiency figure, since the litres you did log wouldn't match the true distance covered.</p>
+    </div>
+    <div class="checkbox-row">
+      <span class="box">☑</span>
+      <p><strong>Not filled to brim (partial fill)</strong> — tick this if you stopped short of a full tank. A partial fill quietly skews two different figures in opposite directions, so this one entry is excluded from Max MPG / Min L per 100km, and the fill-up <em>after</em> it is excluded from Min MPG / Max L per 100km.</p>
+    </div>
+
+    <div class="callout warn">
+      <span class="callout-label">Why it matters</span>
+      <p>MPG only means anything when it's measured brim-to-brim. Fill up less than full, and that tank's litres understate what you actually burned — making that trip look better than it was, and making the next trip (which has to make up the difference) look worse. Tick the box and both distortions get excluded from your best/worst readings.</p>
+    </div>
+
+    <h3>Fixing an old entry</h3>
+    <p>Every entry has a pencil icon — edit any field, including both checkboxes, at any time. Stats recalculate immediately, so if you logged a partial fill weeks ago without ticking the box, go back and tick it now.</p>
+
+    <h3>Backing up your log</h3>
+    <p>The download/upload icons above the log export or import your entries as a CSV file — useful for keeping a backup, or moving your history to a new phone.</p>
+  </section>
+
+  <section id="stats">
+    <div class="section-head"><span class="section-num">03</span><h2>Stats</h2></div>
+    <p class="section-sub">A running summary for whichever vehicle is selected, once you've logged at least two fill-ups.</p>
+    <div class="grid-2">
+      <div class="stat-card"><h4>Efficiency</h4><p>Average, best, and worst MPG or L/100km — switch which unit you're viewing at the top.</p></div>
+      <div class="stat-card"><h4>Distance &amp; cost</h4><p>Total distance driven, your safe range estimate, and total &amp; average spend.</p></div>
+      <div class="stat-card"><h4>Volume</h4><p>Total, average, and largest fill-up — the largest one doubles as a rough tank-size estimate elsewhere in the app.</p></div>
+    </div>
+
+    <h3>What "safe range" actually means</h3>
+    <p>It's the average of your three longest fill-to-fill distances on record — roughly what you've proven this vehicle can manage on a tank, based on your best runs.</p>
+    <div class="callout warn">
+      <span class="callout-label">Estimate, not a guarantee</span>
+      <p>Because it's built from your <em>longest</em> tanks, this number leans toward your best-case driving, not a conservative floor. Motorway cruising, stop-start town driving, a full boot, a cold engine, or bad weather can all shift your real range in either direction on any given trip.</p>
+      <p>Treat it as a rough guide, not a substitute for judgement — don't run down toward empty just because the number says you should still have miles left, especially before a detour or a trip somewhere remote.</p>
+    </div>
+  </section>
+
+  <section id="prices">
+    <div class="section-head"><span class="section-num">04</span><h2>Prices</h2></div>
+    <p class="section-sub">Finds nearby fuel stations and sorts them by whichever single grade you're after.</p>
+
+    <h3>Searching</h3>
+    <p>Type a postcode, or leave it blank to search from your current GPS location (you'll be asked to allow location access the first time). Set a search radius and pick a fuel grade — <code>Unleaded</code>, <code>Super Unleaded</code>, <code>Diesel</code>, or <code>Premium Diesel</code>.</p>
+
+    <div class="callout">
+      <span class="callout-label">Why four grades, not two</span>
+      <p>Unleaded and Super Unleaded run at genuinely different prices, as do standard and Premium Diesel. Picking one specific grade means the price you see and the order stations are sorted in are always the same thing — no mixing a station's cheap regular fuel with another's pricier premium.</p>
+    </div>
+
+    <h3>Reading results</h3>
+    <p>Sort by <strong>Price</strong> or <strong>Distance</strong>, and toggle between a list and a map view top-right. Results stay fresh for 15 minutes before you'll need to search again.</p>
+  </section>
+
+</div>
+
+<footer class="sitefoot">
+  <p>Questions or found something confusing? <a href="contact.html">Get in touch</a>.</p>
+</footer>
+
+</body>
+</html>
