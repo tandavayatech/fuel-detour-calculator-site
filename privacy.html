@@ -40,7 +40,7 @@
     <div class="eyebrow">Legal</div>
     <h1>Privacy Policy</h1>
     <div class="meta">
-      <span>Last updated: <strong>13 September 2026</strong></span>
+      <span>Last updated: <strong>19 September 2026</strong></span>
       <span>Developer: <strong>Tandavaya Tech</strong></span>
     </div>
   </header>
@@ -67,7 +67,8 @@
     <li><strong>Type a postcode</strong> — it's converted to a map coordinate using Android's built-in Geocoder.</li>
     <li><strong>Leave it blank</strong> — the app asks permission to use your device's GPS location via Google Play services.</li>
   </ul>
-  <p>Your coordinates are used entirely on your device to work out which stations count as "nearby" — they are <strong>never sent to the government's Fuel Finder service</strong>. That service only ever receives a request for a page of its full nationwide station list; matching that data against your location happens locally in the app afterwards. The only place your location data is sent off your device is <strong>Google</strong> — to resolve a typed postcode into coordinates, and, if you switch to the map view, to render the map centred on your position. This goes straight from your device to Google — never through us. Search results are kept in memory only while the app is open, for up to 15 minutes, then discarded; they are never written to disk.</p>
+  <p>Your coordinates are used entirely on your device to work out which stations count as "nearby" — they are <strong>never sent to the government's Fuel Finder service</strong>. That service only ever receives a request for a page of its full nationwide station list; matching that data against your location happens locally in the app afterwards. The only place your location data is sent off your device is <strong>Google</strong> — to resolve a typed postcode into coordinates, and, if you switch to the map view, to render the map centred on your position. This goes straight from your device to Google — never through us. To avoid downloading the same data repeatedly, the app keeps the fuel station and price data in memory only while the app is open — station details for up to an hour, prices for up to 15 minutes, and recent search results for up to five minutes — then discards it. None of this is ever written to disk.</p>
+  <p>If you tap the <strong>Navigate</strong> button on a station, the app passes that <em>station's</em> location — not yours — to the navigation app you choose, such as Google Maps or Waze. What that app does with it is governed by its own privacy policy.</p>
 
   <h2>What we <span>don't</span> do</h2>
   <ul>
@@ -81,6 +82,9 @@
   <h2>Third-party <span>services</span></h2>
   <div class="card">
     <p><strong>Google Play services</strong> (Location and Maps) — used to resolve GPS/postcode coordinates and display the results on a map. Governed by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</p>
+  </div>
+  <div class="card">
+    <p><strong>Navigation apps</strong> — only if you tap Navigate, and only the app you choose. It receives the station's location, not yours. Governed by that app's own privacy policy.</p>
   </div>
   <div class="card">
     <p><strong>UK Government Fuel Finder service</strong> — supplies the fuel station and price data shown in the app. Your location is never sent to this service; the app requests pages of the full national dataset and filters them by distance on your device. Governed by the <a href="https://www.gov.uk/help/privacy-notice" target="_blank" rel="noopener">GOV.UK privacy notice</a>.</p>
