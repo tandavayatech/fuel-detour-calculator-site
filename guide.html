@@ -47,23 +47,27 @@
       <li>Give it a name you'll recognise — "Focus," "Work Van," or a registration plate all work. Each vehicle needs its own unique name.</li>
     </ol>
     <p>Everything else in the app — the calculator, your stats, your log — is scoped to whichever vehicle is currently selected. Choose one from the dropdown at the top of the Calculator, Fuel Log or Stats tab (they all share the same selection), or tap it in the vehicle list on the Settings tab. The Calculator and Stats dropdowns also have a <strong>Clear selection</strong> option.</p>
+    <p>If you open the Fuel Log or Stats tab without a vehicle selected, the message on screen has a tappable <strong>Settings</strong> link that takes you straight there. The first time you open the app, a short welcome tour also walks through these steps.</p>
+    <p>Look out for the <strong>(i)</strong> icons throughout the app — tap one for a plain-English explanation of whatever it sits next to.</p>
   </section>
 
   <section id="calculator">
     <div class="section-head"><span class="section-num">01</span><h2>Calculator</h2></div>
     <p class="section-sub">Works out the minimum fuel you'd need to buy at a cheaper detour to make the trip worth it.</p>
 
-    <h3>Choose a vehicle (optional)</h3>
+    <p>The calculator is split into four cards — Vehicle, Detour distance, Efficiency and Prices — each with an (i) icon explaining it. Whatever you enter is remembered, even after you close the app, so you can pick up where you left off.</p>
+
+    <h3>Vehicle (optional)</h3>
     <p>Pick a vehicle to use its fuel log for your average efficiency and tank-size estimate. You can also leave it clear and simply type your own efficiency figure — the calculator works either way.</p>
 
-    <h3>Set the detour distance</h3>
-    <p>Two modes: <strong>Manual</strong>, where you type the extra distance directly, or <strong>Calculate</strong>, where you enter your normal route's distance and the detour route's distance — the app works out the difference for you.</p>
+    <h3>Detour distance</h3>
+    <p>Two modes: <strong>Manual</strong>, where you type the <em>extra distance</em> the detour adds directly, or <strong>Calculate</strong>, where you enter the length of your <em>normal route</em> and the length of the <em>detour route</em> — the app works out the difference for you.</p>
 
-    <h3>Set your efficiency</h3>
-    <p>The efficiency unit — <code>MPG (UK)</code>, <code>MPG (US)</code>, or <code>L/100km</code> — is chosen on the <a href="#settings">Settings</a> tab. Type a figure by hand, or tick <strong>Use average</strong> once you've logged two or more fill-ups, to use your vehicle's real calculated efficiency instead of a guess. What you type is remembered when you switch to another tab and back.</p>
+    <h3>Efficiency</h3>
+    <p>The efficiency unit — <code>MPG (UK)</code>, <code>MPG (US)</code>, or <code>L/100km</code> — is chosen on the <a href="#settings">Settings</a> tab. Type a figure by hand, or tick <strong>Use average</strong> once you've logged two or more fill-ups, to use your vehicle's real calculated efficiency instead of a guess.</p>
 
-    <h3>Enter the prices, then calculate</h3>
-    <p>Enter your current price and the detour's price in £ per litre, then tap <strong>Calculate</strong> (or press Done on the keyboard). The answer appears in a popup — tap <strong>Close</strong>, tap outside it, or press Back to dismiss it.</p>
+    <h3>Prices, then calculate</h3>
+    <p>Enter the <em>current</em> price (your usual stop or normal route) and the <em>detour</em> price in £ per litre. The <strong>Calculate</strong> button stays pinned at the bottom of the screen — tap it (or press Done on the keyboard) and the answer appears in a popup. Tap <strong>Close</strong>, tap outside it, or press Back to dismiss it.</p>
 
     <h3>Read the result</h3>
     <div class="grid-2">
@@ -95,11 +99,17 @@
       <p>MPG only means anything when it's measured brim-to-brim. Fill up less than full, and that tank's litres understate what you actually burned — making that trip look better than it was, and making the next trip (which has to make up the difference) look worse. Tick the box and both distortions get excluded from your best/worst readings.</p>
     </div>
 
-    <h3>Fixing an old entry</h3>
+    <h3>Fixing or deleting an entry</h3>
     <p>Every entry has a pencil icon — edit any field, including both checkboxes, at any time. Stats recalculate immediately, so if you logged a partial fill weeks ago without ticking the box, go back and tick it now.</p>
+    <p>The bin icon deletes an entry after a confirmation. Straight afterwards an <strong>Undo</strong> bar appears at the bottom of the screen — tap it to bring the entry back, and the list scrolls to show it.</p>
 
-    <h3>Backing up your log</h3>
-    <p>The download/upload icons above the log export or import your entries as a CSV file — useful for keeping a backup, or moving your history to a new phone.</p>
+    <h3>Backing up and moving your log</h3>
+    <p>Above the log are two labelled buttons, <strong>Import</strong> and <strong>Export</strong>, with an (i) icon explaining them. Both work with CSV files (a spreadsheet format you can also open in Excel or Google Sheets).</p>
+    <ul>
+      <li><strong>Export</strong> asks whether to save <em>this vehicle</em> or <em>all vehicles</em>. Files are named <code>FDC &lt;vehicle name&gt;.csv</code> or <code>FDC all vehicles.csv</code>, and a message confirms what was saved.</li>
+      <li><strong>Import</strong> asks you to pick a file, then asks where it should go: the <em>selected vehicle</em>, <em>another vehicle</em>, or <em>a new vehicle</em> you name on the spot. Importing into an existing vehicle replaces its current log, and the app tells you how many entries that will replace before you confirm. A file containing several vehicles is imported into the vehicles with matching names, creating any that don't exist yet.</li>
+    </ul>
+    <p>If a file can't be read, the app says so rather than failing silently — make sure it's one exported from Fuel Detour Calculator.</p>
   </section>
 
   <section id="stats">
@@ -109,7 +119,10 @@
       <div class="stat-card"><h4>Efficiency</h4><p>Average, best, and worst MPG or L/100km, in the unit chosen on the Settings tab.</p></div>
       <div class="stat-card"><h4>Distance &amp; cost</h4><p>Total distance driven, your safe range estimate, and total &amp; average spend.</p></div>
       <div class="stat-card"><h4>Volume</h4><p>Total, average, and largest fill-up — the largest one (partial fills included) doubles as a rough tank-size estimate elsewhere in the app.</p></div>
+      <div class="stat-card"><h4>Efficiency over time</h4><p>A line chart with one point per fill-to-fill trip, oldest on the left, so you can see whether your economy is improving or slipping. Trips involving a partial fill or a missed fill-up are left out. Needs at least two usable trips.</p></div>
+      <div class="stat-card"><h4>Spend by month</h4><p>Bars showing what you spent on fuel in each of your last six months with a logged fill-up.</p></div>
     </div>
+    <p>Every row has an (i) icon that explains exactly how that figure is worked out.</p>
 
     <h3>What "safe range" actually means</h3>
     <p>It's the average of your three longest fill-to-fill distances on record — roughly what you've proven this vehicle can manage on a tank, based on your best runs.</p>
@@ -125,7 +138,7 @@
     <p class="section-sub">Finds nearby fuel stations and sorts them by whichever single grade you're after.</p>
 
     <h3>Searching</h3>
-    <p>Type a postcode, or leave it blank to search from your current GPS location (you'll be asked to allow location access the first time). Set a search radius — in miles or kilometres, matching the unit chosen on the Settings tab — and pick a fuel grade: <code>Unleaded</code>, <code>Super Unleaded</code>, <code>Diesel</code>, or <code>Premium Diesel</code>. The selected grade is highlighted in purple with a tick.</p>
+    <p>Type a postcode, or leave it blank — or tap the <strong>location pin</strong> in the postcode box — to search from where you are now (you'll be asked to allow location access the first time). Set a search radius — in miles or kilometres, matching the unit chosen on the Settings tab — and pick a fuel grade: <code>Unleaded</code>, <code>Super Unleaded</code>, <code>Diesel</code>, or <code>Premium Diesel</code>. Choose whether to sort by <strong>Price</strong> or <strong>Distance</strong>. Whatever is selected — grade or sort order — is highlighted in solid purple.</p>
     <p>The first search downloads the national price data, which can take around ten seconds — the app shows its progress as it goes. After that, repeat searches are near-instant.</p>
 
     <div class="callout">
@@ -134,31 +147,35 @@
     </div>
 
     <h3>Reading results</h3>
-    <p>Each station shows its price on the left and its distance on the right (in miles or kilometres, following your Settings choice). Below that come the station's name — with its brand in brackets if that's different — and its area, town and full postcode. Sort by <strong>Price</strong> or <strong>Distance</strong> using the buttons under the fuel grades.</p>
+    <p>Each station shows its price on the left and its distance on the right (in miles or kilometres, following your Settings choice). Next to the price you'll see either a <strong>Cheapest</strong> badge — for the lowest-priced station or stations in the list — or how much dearer the station is, such as <code>+2.1p</code>.</p>
+    <p>Below that come the station's name — with its brand in brackets if that's different — and its area, town and full postcode, followed by <em>how recently that price was updated</em> ("Price updated 2 days ago") and <em>today's usual opening hours</em>, where the station publishes them ("Today: 06:00–22:00", or "Open 24 hours"). Sort by <strong>Price</strong> or <strong>Distance</strong> using the buttons under the fuel grades. The top bar shows when the prices were last downloaded.</p>
     <p>Every station has two icons: a <strong>map pin</strong> to show it on the map, and a <strong>directions</strong> icon to navigate to it. Navigate hands the station's location to the navigation app of your choice — Google Maps, Waze, or whichever you have installed. Tapping anywhere else on a station's card also shows it on the map.</p>
 
     <h3>The map</h3>
     <p>Use the map/list icon at the top right to switch views. What you see depends on how you got there:</p>
     <ul>
       <li><strong>From a station's card or map pin</strong> — the map shows only that station, highlighted, along with your own location. Tap <strong>Show all stations</strong> to bring the rest back.</li>
-      <li><strong>From the map icon at the top</strong> — the map shows every station, with a slider underneath the fuel grades. Slide it from <em>cheapest 1</em> all the way to <em>All</em> to declutter the map and see only the best-priced stations (any stations tied on price are shown together). It keeps its setting when you change fuel grade.</li>
+      <li><strong>From the map icon at the top</strong> — the map shows every station, with a slider underneath the fuel grades. Slide it from the very cheapest all the way to <em>all</em> stations to declutter the map. The label tells you exactly what's showing, such as "Showing cheapest 7 of 133" — any stations tied on price are shown together, which is why the number isn't always a round one. It keeps its setting when you change fuel grade.</li>
     </ul>
-    <p>Tap any price flag on the map to select it and see a panel with its name, price and a <strong>Navigate</strong> button. Tap an empty part of the map to clear the selection.</p>
+    <p>Tap any price flag on the map to select it and see a panel with its name, price, how recently that price was updated, today's opening hours and a <strong>Navigate</strong> button. Tap an empty part of the map to clear the selection.</p>
 
     <h3>How fresh is the data?</h3>
-    <p>Prices are refreshed at most every 15 minutes, station details at most every hour, and an identical search within five minutes reuses the last result, so the refresh button may appear to do nothing if you've only just searched. Stations with prices older than two weeks, and stations marked as closed, are left out.</p>
+    <p>Prices are refreshed at most every 15 minutes, station details at most every hour, and an identical search within five minutes reuses the last result, so if you tap refresh when nothing has changed, the app tells you the prices are already up to date. Stations with prices older than two weeks, and stations marked as closed, are left out.</p>
     <p>Price data comes from the UK Government's Fuel Finder service.</p>
   </section>
 
   <section id="settings">
     <div class="section-head"><span class="section-num">05</span><h2>Settings</h2></div>
-    <p class="section-sub">The app's one global preference, plus vehicle management.</p>
+    <p class="section-sub">Your unit and appearance preferences, plus vehicle management. The selected option in each row is highlighted in solid purple.</p>
 
     <h3>Efficiency unit</h3>
     <p>Choose <code>MPG (UK)</code>, <code>MPG (US)</code>, or <code>L/100km</code>. This applies across the Calculator, Fuel Log, Stats and Prices tabs. Distances follow it: miles for the MPG options, kilometres for L/100km.</p>
 
+    <h3>Appearance</h3>
+    <p>Choose <strong>Light</strong>, <strong>Dark</strong>, or <strong>System</strong> to follow your phone's own setting. The app starts in Dark.</p>
+
     <h3>Vehicles</h3>
-    <p><strong>Add Vehicle</strong> creates a new vehicle — names must be unique. Below it is a list of all your vehicles; tap one to select it (shown with a tick). The <strong>Delete</strong> button at the bottom removes the selected vehicle <em>and all of its fuel log entries</em>, so export the log first if you want to keep it.</p>
+    <p><strong>Add Vehicle</strong> creates a new vehicle — names must be unique, and you can also create one while importing a log. Below it is a list of all your vehicles; tap one to select it (shown with a tick). The <strong>Delete</strong> button at the bottom removes the selected vehicle <em>and all of its fuel log entries</em>, so export the log first if you want to keep it.</p>
 
     <h3>About</h3>
     <p>The top of the page shows the app's version and a link to this website.</p>
