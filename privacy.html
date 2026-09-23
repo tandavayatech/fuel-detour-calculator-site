@@ -40,7 +40,7 @@
     <div class="eyebrow">Legal</div>
     <h1>Privacy Policy</h1>
     <div class="meta">
-      <span>Last updated: <strong>21 September 2026</strong></span>
+      <span>Last updated: <strong>23 September 2026</strong></span>
       <span>Developer: <strong>Tandavaya Tech</strong></span>
     </div>
   </header>
@@ -53,12 +53,12 @@
       <div class="glance-item"><span class="glance-mark yes">✓</span><p>No account or sign-in</p></div>
       <div class="glance-item"><span class="glance-mark yes">✓</span><p>Your fuel logs stay on your device only</p></div>
       <div class="glance-item"><span class="glance-mark no">✕</span><p>No ads, analytics, or tracking SDKs</p></div>
-      <div class="glance-item"><span class="glance-mark no">✕</span><p>We don't run a server — there's nowhere to send your data even if we wanted to</p></div>
+      <div class="glance-item"><span class="glance-mark yes">✓</span><p>A Prices search sends your location to our own server, briefly, to find nearby stations — never your fuel log</p></div>
     </div>
   </div>
 
   <h2>What's stored on <span>your device</span></h2>
-  <p>Vehicle names, and every fuel refill you log — odometer reading, litres, price, date, and the two tracking flags (<code>Missed previous refill</code> and <code>Not filled to brim</code>) — are saved to the app's private storage on your phone. The app also remembers what you last typed into the Calculator (distances, efficiency and prices) and your settings — efficiency unit, Light/Dark choice, and whether you've seen the welcome tour — so it's ready when you return. No other app can read this data, and we never see it: there's no server this app talks to for your log data.</p>
+  <p>Vehicle names, and every fuel refill you log — odometer reading, litres, price, date, and the two tracking flags (<code>Missed previous refill</code> and <code>Not filled to brim</code>) — are saved to the app's private storage on your phone. The app also remembers what you last typed into the Calculator (distances, efficiency and prices) and your settings — efficiency unit, Light/Dark choice, and whether you've seen the welcome tour — so it's ready when you return. No other app can read this data, and it never leaves your device: it isn't sent to our server (described below) or anywhere else, ever.</p>
   <p>If your phone's standard Android backup is switched on, this data may be included in that backup like any other app's files — that backup is tied to your own Google account, not to us. Uninstalling the app, or deleting entries within it, removes the data permanently. Exporting to CSV creates a file entirely under your control — it can include your vehicle names and every logged entry, for one vehicle or all of them — and where it goes after that is up to you. Importing a CSV only reads the file you choose.</p>
 
   <h2>Location and <span>postcode</span> searches</h2>
@@ -67,7 +67,10 @@
     <li><strong>Type a postcode</strong> — it's converted to a map coordinate using Android's built-in Geocoder.</li>
     <li><strong>Leave it blank</strong> — the app asks permission to use your device's GPS location via Google Play services.</li>
   </ul>
-  <p>Your coordinates are used entirely on your device to work out which stations count as "nearby" — they are <strong>never sent to the government's Fuel Finder service</strong>. That service only ever receives a request for a page of its full nationwide station list; matching that data against your location happens locally in the app afterwards. The only place your location data is sent off your device is <strong>Google</strong> — to resolve a typed postcode into coordinates, and, if you switch to the map view, to render the map centred on your position. This goes straight from your device to Google — never through us. To avoid downloading the same data repeatedly, the app keeps the fuel station and price data in memory only while the app is open — station details for up to an hour, prices for up to 15 minutes, and recent search results for up to five minutes — then discards it. None of this is ever written to disk.</p>
+  <p>Those coordinates are sent to <strong>our own backend server</strong>, which we run to find nearby stations for you. The server uses them for that one search only — to work out which stations count as "nearby" — and doesn't save them, build a history of your searches, or link them to any account (the app doesn't have accounts). Like any web server, our hosting provider's standard operational logs may briefly retain technical details of each request, such as the coordinates and your device's IP address, as ordinary infrastructure logging — this isn't something our app code does deliberately, isn't reviewed or analysed by us, and is retained only for a limited period under our hosting provider's standard practices, not indefinitely.</p>
+  <p>Your coordinates are <strong>never sent to the government's Fuel Finder service</strong>. Our server downloads that service's full nationwide station and price list itself, and works out which stations are near you on our side — Fuel Finder only ever receives a request for a page of its full dataset, with no location information in it at all.</p>
+  <p>The only place your location data is sent directly from your device, without going through us first, is <strong>Google</strong> — to resolve a typed postcode into coordinates, and, if you switch to the map view, to render the map centred on your position.</p>
+  <p>To avoid downloading the same data repeatedly, both the app and our server keep the fuel station and price data cached for a short time — station details for up to an hour, prices for up to 15 minutes — then refresh it. This is shared station/price reference data, not anything about you, and is never written to disk on your device.</p>
   <p>If you tap the <strong>Navigate</strong> button on a station, the app passes that <em>station's</em> location — not yours — to the navigation app you choose, such as Google Maps or Waze. What that app does with it is governed by its own privacy policy.</p>
 
   <h2>What we <span>don't</span> do</h2>
@@ -87,7 +90,10 @@
     <p><strong>Navigation apps</strong> — only if you tap Navigate, and only the app you choose. It receives the station's location, not yours. Governed by that app's own privacy policy.</p>
   </div>
   <div class="card">
-    <p><strong>UK Government Fuel Finder service</strong> — supplies the fuel station and price data shown in the app. Your location is never sent to this service; the app requests pages of the full national dataset and filters them by distance on your device. Governed by the <a href="https://www.gov.uk/help/privacy-notice" target="_blank" rel="noopener">GOV.UK privacy notice</a>.</p>
+    <p><strong>UK Government Fuel Finder service</strong> — supplies the fuel station and price data shown in the app. Your location is never sent to this service; our own server requests pages of the full national dataset and filters them by distance itself. Governed by the <a href="https://www.gov.uk/help/privacy-notice" target="_blank" rel="noopener">GOV.UK privacy notice</a>.</p>
+  </div>
+  <div class="card">
+    <p><strong>Our backend server</strong> — runs on Google Cloud, which provides the hosting infrastructure. Google doesn't use this data for its own purposes; it's simply where our server runs, the same way any website needs somewhere to be hosted. Governed by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a> for that hosting relationship.</p>
   </div>
 
   <h2>Your <span>choices</span></h2>
