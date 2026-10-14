@@ -47,7 +47,7 @@ a:focus-visible, button:focus-visible{outline:2px solid var(--accent);outline-of
 .sitenav .links a:hover{color:var(--text);}
 .sitenav .links a.active{color:var(--accent);border-bottom-color:var(--accent);}
 
-.wrap{max-width:760px;margin:0 auto;padding:56px 24px 100px;}
+.wrap{max-width:760px;margin:0 auto;padding:56px 24px 0;}
 .wrap.narrow{max-width:700px;}
 
 .eyebrow{
@@ -127,7 +127,7 @@ nav.tabs a:hover, nav.tabs a:focus-visible{color:var(--accent);border-color:var(
 
 .divider{height:1px;background:var(--border);margin:52px 0 0;border:0;}
 footer.sitefoot{
-  margin-top:64px;border-top:1px solid var(--border);
+  margin-top:28px;border-top:1px solid var(--border);
   color:var(--text-muted);font-size:14px;
   max-width:900px;margin-left:auto;margin-right:auto;padding:24px 24px 40px;
 }
