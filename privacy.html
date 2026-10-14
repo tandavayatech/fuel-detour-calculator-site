@@ -26,8 +26,9 @@
 <body>
 
 <nav class="sitenav">
-  <a href="index.html" class="brand">⛽ Fuel Detour Calculator</a>
+  <a href="index.html" class="brand"><img src="assets/icon.svg" width="28" height="28" alt="">Fuel Detour Calculator</a>
   <div class="links">
+    <a href="index.html">Home</a>
     <a href="guide.html">Guide</a>
     <a href="privacy.html" class="active">Privacy</a>
     <a href="contact.html">Contact</a>
@@ -40,7 +41,7 @@
     <div class="eyebrow">Legal</div>
     <h1>Privacy Policy</h1>
     <div class="meta">
-      <span>Last updated: <strong>23 September 2026</strong></span>
+      <span>Last updated: <strong>14 October 2026</strong></span>
       <span>Developer: <strong>Tandavaya Tech</strong></span>
     </div>
   </header>
@@ -64,13 +65,13 @@
   <h2>Location and <span>postcode</span> searches</h2>
   <p>The Prices tab is the only part of the app that involves your location, and only when you actively search. There are two ways to search:</p>
   <ul>
-    <li><strong>Type a postcode</strong> — it's converted to a map coordinate using Android's built-in Geocoder.</li>
+    <li><strong>Type a postcode</strong> — it's converted to a map coordinate using Android's built-in Geocoder. Your device's location is not used in any way.</li>
     <li><strong>Leave it blank</strong> — the app asks permission to use your device's GPS location via Google Play services.</li>
   </ul>
   <p>Those coordinates are sent to <strong>our own backend server</strong>, which we run to find nearby stations for you. The server uses them for that one search only — to work out which stations count as "nearby" — and doesn't save them, build a history of your searches, or link them to any account (the app doesn't have accounts). Like any web server, our hosting provider's standard operational logs may briefly retain technical details of each request, such as the coordinates and your device's IP address, as ordinary infrastructure logging — this isn't something our app code does deliberately, isn't reviewed or analysed by us, and is retained only for a limited period under our hosting provider's standard practices, not indefinitely.</p>
-  <p>Your coordinates are <strong>never sent to the government's Fuel Finder service</strong>. Our server downloads that service's full nationwide station and price list itself, and works out which stations are near you on our side — Fuel Finder only ever receives a request for a page of its full dataset, with no location information in it at all.</p>
+  <p>Your coordinates are <strong>never sent to the government's Fuel Finder service</strong>. Our server downloads that service's full nationwide station and price list itself, and works out which stations are near you — Fuel Finder only ever receives a request for a page of its full dataset, with no location information in it at all.</p>
   <p>The only place your location data is sent directly from your device, without going through us first, is <strong>Google</strong> — to resolve a typed postcode into coordinates, and, if you switch to the map view, to render the map centred on your position.</p>
-  <p>To avoid downloading the same data repeatedly, both the app and our server keep the fuel station and price data cached for a short time — station details for up to an hour, prices for up to 15 minutes — then refresh it. This is shared station/price reference data, not anything about you, and is never written to disk on your device.</p>
+  <p>To avoid downloading the same data repeatedly, our server keeps the national fuel station and price data cached for a short time — station details for up to an hour, prices for up to 15 minutes — then refreshes it. This is shared station and price reference data, not anything about you. Separately, the app holds the results of your most recent search in memory for up to 15 minutes so you can return to them without searching again; they are never written to disk on your device.</p>
   <p>If you tap the <strong>Navigate</strong> button on a station, the app passes that <em>station's</em> location — not yours — to the navigation app you choose, such as Google Maps or Waze. What that app does with it is governed by its own privacy policy.</p>
 
   <h2>What we <span>don't</span> do</h2>

@@ -13,43 +13,43 @@
 <body>
 
 <nav class="sitenav">
-  <a href="index.html" class="brand">⛽ Fuel Detour Calculator</a>
+  <a href="index.html" class="brand"><img src="assets/icon.svg" width="28" height="28" alt="">Fuel Detour Calculator</a>
   <div class="links">
+    <a href="index.html">Home</a>
     <a href="guide.html" class="active">Guide</a>
     <a href="privacy.html">Privacy</a>
     <a href="contact.html">Contact</a>
   </div>
 </nav>
 
-<div class="wrap">
+<div class="wrap tight">
 
   <header>
     <div class="eyebrow">The Handbook</div>
     <h1>How to use it</h1>
-    <p class="lede">Everything the app can do, tab by tab — and the two checkboxes that keep your MPG figures honest.</p>
+    <p class="lede">Everything the app can do, tab by tab.</p>
   </header>
 
   <nav class="tabs">
-    <a href="#start"><span class="icon">🚗</span>Start Here</a>
-    <a href="#calculator"><span class="icon">🧭</span>Calculator</a>
-    <a href="#log"><span class="icon">⛽</span>Fuel Log</a>
-    <a href="#stats"><span class="icon">📊</span>Stats</a>
-    <a href="#prices"><span class="icon">📍</span>Prices</a>
-    <a href="#settings"><span class="icon">⚙️</span>Settings</a>
+    <a href="#start">Start Here</a>
+    <a href="#calculator">Calculator</a>
+    <a href="#log">Fuel Log</a>
+    <a href="#stats">Stats</a>
+    <a href="#prices">Prices</a>
+    <a href="#settings">Settings</a>
   </nav>
 
   <section id="start">
     <div class="section-head"><span class="section-num">00</span><h2>Before you start</h2></div>
-    <p class="section-sub">The Calculator and Prices tabs work completely stand-alone — no setup needed. Adding a vehicle is only for the Fuel Log and Stats tabs, which track your efficiency over time.</p>
-    <p>To use the Calculator straight away: open the <strong>Calculator</strong> tab, enter the detour distance and both prices, then type your vehicle's efficiency by hand. To use <strong>Prices</strong>, just search — no vehicle needed there either.</p>
-    <p>If you'd like your efficiency worked out and tracked automatically instead of typing it in each time, add a vehicle:</p>
+    <p class="section-sub">The Calculator and Prices tabs work straight away — no setup needed.</p>
+    <p>To use the Calculator straight away: open the <strong>Calculator</strong> tab, enter how much extra distance the detour adds, both prices, and your vehicle's efficiency.</p>
+    <p>To use <strong>Prices</strong>, just search — no vehicle details are needed.</p>
+    <p>If you like, you can add vehicles and log your fuel fill-ups against them. The app can then work out your real fuel economy and compare the litres you'd need to buy at a cheaper fuel station with your largest logged fill-up, to see if the detour will save you money. This makes the detour calculator much more useful. To do this:</p>
     <ol class="step-list">
       <li>Open the <strong>Settings</strong> tab.</li>
       <li>Tap <strong>Add Vehicle</strong>.</li>
       <li>Give it a name you'll recognise — "Focus," "Work Van," or a registration plate all work. Each vehicle needs its own unique name.</li>
     </ol>
-    <p>Record your fill-ups on the <strong>Fuel Log</strong> tab and your results appear on <strong>Stats</strong>; the Calculator can then use your vehicle's real average efficiency instead of a typed figure. Everything vehicle-related — the calculator's average, your stats, your log — is scoped to whichever vehicle is currently selected. Choose one from the dropdown at the top of the Calculator, Fuel Log or Stats tab (they all share the same selection), or tap it in the vehicle list on the Settings tab. The Calculator and Stats dropdowns also have a <strong>Clear selection</strong> option.</p>
-    <p>If you open the Fuel Log or Stats tab without a vehicle selected, the message on screen has a tappable <strong>Settings</strong> link that takes you straight there. The first time you open the app, a short welcome tour also covers this — and you can replay it any time with the <strong>Show welcome tour</strong> button on the Settings tab.</p>
     <p>Look out for the <strong>(i)</strong> icons throughout the app — tap one for a plain-English explanation of whatever it sits next to.</p>
   </section>
 
@@ -57,10 +57,10 @@
     <div class="section-head"><span class="section-num">01</span><h2>Calculator</h2></div>
     <p class="section-sub">Works out the minimum amount of fuel you'd need to buy at a cheaper detour to make the trip worth it.</p>
 
-    <p>The calculator is split into four cards — Vehicle, Detour distance, Efficiency and Prices — each with an (i) icon explaining it. Whatever you enter is remembered, even after you close the app, so you can pick up where you left off.</p>
+    <p>The calculator is split into four sections — Vehicle, Detour distance, Efficiency and Prices — each with an (i) icon explaining it.</p>
 
     <h3>Vehicle (optional)</h3>
-    <p>Pick a vehicle to use its fuel log for your average efficiency and tank-size estimate. You can also leave it clear and simply type your own efficiency figure — the calculator works either way.</p>
+    <p>Pick a vehicle to use its fuel log for your average efficiency and largest fill-up so far, which the app treats as your tank size. You can also leave it clear and simply type your own efficiency figure — the calculator works either way.</p>
 
     <h3>Detour distance</h3>
     <p>Two modes: <strong>Manual</strong>, where you type the <em>extra distance</em> the detour adds directly, or <strong>Calculate</strong>, where you enter the length of your <em>normal route</em> and the length of the <em>detour route</em> — the app works out the difference for you.</p>
@@ -69,37 +69,39 @@
     <p>The efficiency unit — <code>MPG (UK)</code>, <code>MPG (US)</code>, or <code>L/100km</code> — is chosen on the <a href="#settings">Settings</a> tab. Type a figure by hand, or tick <strong>Use average</strong> once you've logged two or more fill-ups, to use your vehicle's real calculated efficiency instead of a guess.</p>
 
     <h3>Prices, then calculate</h3>
-    <p>Enter the <em>current</em> price (your usual stop or normal route) and the <em>detour</em> price in £ per litre. The <strong>Calculate</strong> button stays pinned at the bottom of the screen — tap it (or press Done on the keyboard) and the answer appears in a popup. Tap <strong>Close</strong>, tap outside it, or press Back to dismiss it.</p>
+    <p>Enter the <em>current</em> fuel price (your usual stop or normal route) and the <em>detour</em> fuel price in £ per litre. The <strong>Calculate</strong> button stays pinned at the bottom of the screen — tap it (or press Done on the keyboard) and the answer appears in a popup. Tap <strong>Close</strong>, tap outside it, or press Back to dismiss it.</p>
 
     <h3>Read the result</h3>
+    <figure class="shot">
+      <img src="assets/calculator-result.jpg" width="640" height="1395" alt="The result popup in the app: you will need to buy at least 31.94 litres at the detour station to make the detour worthwhile, which is 61% of your largest fill-up so far. Buying 52.28 litres, your largest fill-up so far, would save you £1.42 compared with not detouring.">
+      <figcaption>The result popup, with example figures.</figcaption>
+    </figure>
     <div class="grid-2">
-      <div class="stat-card"><h4>Litres to buy</h4><p>The minimum litres you'd need to buy at the detour station for its cheaper price to outweigh the extra fuel burned getting there, rounded up. The detour price has to be lower than your current price for the detour to ever pay off.</p></div>
-      <div class="stat-card"><h4>Percentage of a fill-up</h4><p>With a vehicle that has at least one fill-up logged, that figure is shown as a percentage of your largest fill-up so far — our best guess at your tank size. The gauge turns red above 100%, meaning it may not fit in your tank.</p></div>
-      <div class="stat-card"><h4>Save or pay extra</h4><p>Compares buying a largest-fill-up's worth of fuel at the detour station against not detouring and paying your current price — how much you'd save, or how much more it would cost.</p></div>
+      <div class="stat-card"><h4>Litres you'll need to buy</h4><p>The minimum litres you'd need to buy at the detour station for its cheaper price to outweigh the extra fuel used getting there. The detour price has to be lower than your current price for the detour to ever pay off.</p></div>
+      <div class="stat-card"><h4>Percentage of 'full tank'</h4><p>With a vehicle that has at least one fill-up logged, the litres you'll need to buy is shown as a percentage of your largest fill-up so far — our best guess at your tank size. The gauge turns red above 100%, meaning it may not fit in your tank. Below 100% you'll need to compare it to your fuel gauge to see if you think the detour is worthwhile.</p></div>
+      <div class="stat-card"><h4>How much would a 'full tank' save or cost extra?</h4><p>Compares buying a 'largest-fill-up so far' amount of fuel at the detour station against paying your current price (including the cost of the extra fuel used) and tells you how much you'd save, or how much more it would cost.</p></div>
     </div>
-    <p>We don't know how much fuel is already in your tank, so always compare the result with your actual fuel gauge.</p>
+    <p>We don't know how much fuel is already in your tank, so always compare the result with your actual fuel gauge. We also advise you check with the fuel station you decide to use before visiting to make sure it will be open when you go.</p>
   </section>
 
   <section id="log">
     <div class="section-head"><span class="section-num">02</span><h2>Fuel Log</h2></div>
-    <p class="section-sub">Every fill-up you log here is what makes the Calculator and Stats accurate — the two checkboxes below matter more than they look.</p>
+    <p class="section-sub">Every fill-up you log here is what makes the Calculator and Stats accurate — note the two checkboxes are important!</p>
+
+    <p>If you open the Fuel Log or Stats tab without a vehicle selected, the message on screen has a tappable link that takes you to the <strong>Settings</strong> tab where you can add one.</p>
 
     <h3>Adding a refill</h3>
     <p>Tap the <strong>+</strong> button and fill in the date (it can't be in the future), odometer reading, litres, and cost per litre or total cost. Fill in any two of litres, cost per litre and total and the app works out the third. If you then edit the calculated one, it recalculates one of the others instead, so the three always add up. Tap <strong>Cancel</strong> to back out without saving.</p>
 
     <div class="checkbox-row">
       <span class="box">☑</span>
-      <p><strong>Missed previous refill(s)</strong> — tick this if you topped up at some point without logging it. It stops that unlogged gap being counted in any efficiency figure, since the litres you did log wouldn't match the true distance covered.</p>
+      <p><strong>Missed previous refill(s)</strong> — tick this if you forgot to log your previous fill-up. It stops that unlogged gap being counted in any efficiency figure, since the litres you did log wouldn't match the true distance covered.</p>
     </div>
     <div class="checkbox-row">
       <span class="box">☑</span>
       <p><strong>Not filled to brim (partial fill)</strong> — tick this if you stopped short of a full tank. A partial fill quietly skews two different figures in opposite directions, so this one entry is excluded from Max MPG / Min L per 100km, and the fill-up <em>after</em> it is excluded from Min MPG / Max L per 100km.</p>
     </div>
 
-    <div class="callout warn">
-      <span class="callout-label">Why it matters</span>
-      <p>MPG only means anything when it's measured brim-to-brim. Fill up less than full, and that tank's litres understate what you actually burned — making that trip look better than it was, and making the next trip (which has to make up the difference) look worse. Tick the box and both distortions get excluded from your best/worst readings.</p>
-    </div>
 
     <h3>Fixing or deleting an entry</h3>
     <p>Every entry has a pencil icon — edit any field, including both checkboxes, at any time. Stats recalculate immediately, so if you logged a partial fill weeks ago without ticking the box, go back and tick it now.</p>
@@ -108,7 +110,7 @@
     <h3>Backing up and moving your log</h3>
     <p>Above the log are two labelled buttons, <strong>Import</strong> and <strong>Export</strong>, with an (i) icon explaining them. Both work with CSV files (a spreadsheet format you can also open in Excel or Google Sheets).</p>
     <ul>
-      <li><strong>Export</strong> asks whether to save <em>this vehicle</em> or <em>all vehicles</em>. Files are named <code>FDC &lt;vehicle name&gt;.csv</code> or <code>FDC all vehicles.csv</code>, and a message confirms what was saved.</li>
+      <li><strong>Export</strong> asks whether to save <em>this vehicle</em> or <em>all vehicles</em>, and where to save it to. Files are named <code>FDC &lt;vehicle name&gt;.csv</code> or <code>FDC all vehicles.csv</code>, and a message confirms what was saved.</li>
       <li><strong>Import</strong> asks you to pick a file, then asks where it should go: the <em>selected vehicle</em>, <em>another vehicle</em>, or <em>a new vehicle</em> you name on the spot. Importing into an existing vehicle replaces its current log, and the app tells you how many entries that will replace before you confirm. A file containing several vehicles is imported into the vehicles with matching names, creating any that don't exist yet.</li>
     </ul>
     <p>If a file can't be read, the app says so rather than failing silently — make sure it's one exported from Fuel Detour Calculator.</p>
@@ -137,11 +139,11 @@
 
   <section id="prices">
     <div class="section-head"><span class="section-num">04</span><h2>Prices</h2></div>
-    <p class="section-sub">Finds nearby fuel stations and sorts them by whichever single grade you're after.</p>
+    <p class="section-sub">Finds fuel stations and sorts them by the price of whichever fuel type you've selected.</p>
 
     <h3>Searching</h3>
-    <p>Type a postcode, or leave it blank — or tap the <strong>location pin</strong> in the postcode box — to search from where you are now (you'll be asked to allow location access the first time). Set a search radius — in miles or kilometres, matching the unit chosen on the Settings tab — and pick a fuel grade: <code>Unleaded</code>, <code>Super Unleaded</code>, <code>Diesel</code>, or <code>Premium Diesel</code>. Choose whether to sort by <strong>Price</strong> or <strong>Distance</strong>. Whatever is selected — grade or sort order — is highlighted in solid purple.</p>
-    <p>The first search downloads the national price data, which can take around ten seconds — the app shows its progress as it goes. After that, repeat searches are near-instant.</p>
+    <p>To search for fuel prices around you, leave the postcode box blank or tap the <strong>location pin</strong> (you'll be asked to allow location access the first time). To search in another area, enter a postcode. Set a search radius (in miles or kilometres, set on the Settings tab) and pick a fuel grade: <code>Unleaded</code>, <code>Super Unleaded</code>, <code>Diesel</code>, or <code>Premium Diesel</code>. Choose whether to sort by <strong>Price</strong> or <strong>Distance</strong>.</p>
+    <p>Prices come from the UK Government's Fuel Finder service, via our own server, which keeps the national price data ready for you. If nobody has searched recently, the first search can take up to 30 seconds — the app tells you while it waits. After that, searches are usually near-instant. Note: overnight the data isn't refreshed automatically, so you may need to refresh it a couple of times for it to work — this is the price of a free app!</p>
 
     <div class="callout">
       <span class="callout-label">Why four grades, not two</span>
@@ -157,18 +159,17 @@
     <p>Use the map/list icon at the top right to switch views. What you see depends on how you got there:</p>
     <ul>
       <li><strong>From a station's card or map pin</strong> — the map shows only that station, highlighted, along with your own location. Tap <strong>Show all stations</strong> to bring the rest back.</li>
-      <li><strong>From the map icon at the top</strong> — the map shows every station, with a slider underneath the fuel grades. Slide it from the very cheapest all the way to <em>all</em> stations to declutter the map. The label tells you exactly what's showing, such as "Showing cheapest 7 of 133" — any stations tied on price are shown together, which is why the number isn't always a round one. It keeps its setting when you change fuel grade.</li>
+      <li><strong>From the map icon at the top</strong> — the map shows every station, with a slider underneath the fuel grades. Slide it to the left to just see the cheapest stations or to the right to see more stations. We suggest starting with it slid all the way to the left, then slowly sliding it to the right until you see a fuel station in the area you want at a price you are willing to pay.</li>
     </ul>
     <p>Tap any price flag on the map to select it and see a panel with its name, price, how recently that price was updated, today's opening hours and a <strong>Navigate</strong> button. Tap an empty part of the map to clear the selection.</p>
 
     <h3>How fresh is the data?</h3>
-    <p>Prices are refreshed at most every 15 minutes, station details at most every hour, and an identical search within five minutes reuses the last result, so if you tap refresh when nothing has changed, the app tells you the prices are already up to date. Stations with prices older than two weeks, and stations marked as closed, are left out.</p>
-    <p>Price data comes from the UK Government's Fuel Finder service.</p>
+    <p>Our server refreshes prices at most every 15 minutes and station details at most every hour, so if you tap refresh when nothing has changed, the app tells you the prices are already up to date. The app also keeps your last search for 15 minutes, so coming back to the Prices tab within that time shows it again without searching afresh. Stations with prices older than two weeks, and stations marked as closed, are left out.</p>
   </section>
 
   <section id="settings">
     <div class="section-head"><span class="section-num">05</span><h2>Settings</h2></div>
-    <p class="section-sub">Your unit and appearance preferences, plus vehicle management. The selected option in each row is highlighted in solid purple.</p>
+    <p class="section-sub">Your unit and appearance preferences, plus vehicle management.</p>
 
     <h3>Efficiency unit</h3>
     <p>Choose <code>MPG (UK)</code>, <code>MPG (US)</code>, or <code>L/100km</code>. This applies across the Calculator, Fuel Log, Stats and Prices tabs. Distances follow it: miles for the MPG options, kilometres for L/100km.</p>
@@ -178,6 +179,10 @@
 
     <h3>Vehicles</h3>
     <p><strong>Add Vehicle</strong> creates a new vehicle — names must be unique, and you can also create one while importing a log. Below it is a list of all your vehicles; tap one to select it (shown with a tick). The <strong>Delete</strong> button at the bottom removes the selected vehicle <em>and all of its fuel log entries</em>, so export the log first if you want to keep it.</p>
+    <p>Everything vehicle-related — the calculator's average, your stats, your log — is scoped to whichever vehicle is currently selected. Choose one from the dropdown at the top of the Calculator, Fuel Log or Stats tab (they all share the same selection), or tap it in the vehicle list here. The Calculator and Stats dropdowns also have a <strong>Clear selection</strong> option.</p>
+
+    <h3>Welcome tour</h3>
+    <p>The first time you open the app, a short welcome tour covers the basics. Replay it any time with the <strong>Show welcome tour</strong> button on this tab.</p>
 
     <h3>About</h3>
     <p>The top of the page shows the app's version and a link to this website.</p>
